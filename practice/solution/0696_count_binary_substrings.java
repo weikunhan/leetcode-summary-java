@@ -6,7 +6,7 @@ class Solution {
         
         for (int i = 1; i < s.length(); i++) {
             if (s.charAt(i) == s.charAt(i - 1)) {
-                right += 1;
+                right++;
             } else {
                 res += Math.min(left, right);
                 left = right;
