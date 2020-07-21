@@ -1,6 +1,6 @@
 class Solution {
-    public static String[] valueList = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
-    public static List<String> res = new ArrayList<>();
+    public String[] valueList = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+    public List<String> res = new ArrayList<>();
     
     public List<String> letterCombinations(String digits) {
         res = dfs(digits);
