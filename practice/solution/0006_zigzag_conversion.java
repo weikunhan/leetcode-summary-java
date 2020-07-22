@@ -15,8 +15,8 @@ class Solution {
             valueList[i] = new StringBuilder("");   
         }
         
-        for (int i = 0; i < s.length(); i++) {
-            valueList[count].append(s.charAt(i));
+        for (char c : s.toCharArray()) {
+            valueList[count].append(c);
             
             if (count == 0) {
                 sign = 1;
