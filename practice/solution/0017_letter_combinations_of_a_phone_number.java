@@ -19,8 +19,8 @@ class Solution {
         if (digits.length() == 1) {
             String tempValue = valueList[digits.charAt(0) - '0'];
             
-            for (int i = 0; i < tempValue.length(); i++) {
-                tempList.add(tempValue.substring(i, i + 1));
+            for (char c : tempValue.toCharArray()) {
+                tempList.add(String.valueOf(c));
             }
             
             return tempList;
@@ -28,9 +28,9 @@ class Solution {
         
         String tempValue = valueList[digits.charAt(0) - '0'];
         
-        for (int i = 0; i < tempValue.length(); i++) {
+        for (char c : tempValue.toCharArray()) {
             for (String value : dfs(digits.substring(1))) {
-                tempList.add(tempValue.substring(i, i + 1) + value);
+                tempList.add(String.valueOf(c) + value);
             }
         }
                  
