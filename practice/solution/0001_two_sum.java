@@ -1,6 +1,6 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> valueDict = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> valueDict = new HashMap<Integer, Integer>();
         int[] res = new int[2];
         
         for (int i = 0; i < nums.length; i++) {
