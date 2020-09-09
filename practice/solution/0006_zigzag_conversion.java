@@ -1,6 +1,7 @@
 class Solution {
     public String convert(String s, int numRows) {
-        StringBuilder[] valueList = new StringBuilder[numRows];
+        String[] valueList = new String[numRows];
+        Arrays.fill(valueList, "");
         int count = 0;
         int sign = 1;
         String res = "";
@@ -11,12 +12,8 @@ class Solution {
             return res;
         }  
         
-        for (int i = 0; i < valueList.length; i++) {
-            valueList[i] = new StringBuilder("");   
-        }
-        
         for (char c : s.toCharArray()) {
-            valueList[count].append(c);
+            valueList[count] += c;
             
             if (count == 0) {
                 sign = 1;
@@ -29,8 +26,8 @@ class Solution {
             count += sign;
         }
         
-        for (int i = 0; i < valueList.length; i++) {
-            res += valueList[i];
+        for (String temp : valueList) {
+            res += temp;
         }
         
         return res;
